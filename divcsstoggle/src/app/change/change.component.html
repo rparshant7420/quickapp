@@ -1,0 +1,15 @@
+<div class="container">
+  <mat-toolbar>
+    Chameleon Div
+  </mat-toolbar><br>
+  <div class="changable" >
+    <!-- [ngStyle]="myStyles" -->
+    <h1>
+      This is my Chameleon box
+    </h1>
+  </div><hr>
+  <button mat-raised-button class="color1" color="primary" type="submit" >Blue</button><br><br>
+  (click)="changeStyles()"
+  <button mat-raised-button class="color2" color="warn" type="submit">Red</button><br><br>
+  <button mat-raised-button class="color3" type="submit">Black</button>
+</div>

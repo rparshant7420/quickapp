@@ -1,0 +1,52 @@
+.navtile{
+  height: 64px;
+}
+.right
+{
+  margin-left: auto;
+}
+li.white a{
+  color: white !important;
+  font-size: 18px;
+
+}
+li.white a:hover,
+ul.right:hover
+{
+  color: blue !important;
+}
+.logo{
+  font-weight: bold;
+}
+.logo:hover{
+  color: blue !important;
+
+}
+.contentbelow{
+  /* border: 2px solid red; */
+  width: 100vw;
+  height: 593px;
+  padding-left: 419px;
+  padding-top: 205px;
+  /* background-color: blue; */
+  background-image: url(src/assets/img.jpg);
+  background-position: center;
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+
+}
+div h1{
+  font-weight: bolder;
+  font-size: 60px;
+  color: #fff;
+}
+div p{
+  font-weight: bold;
+  width: 750px;
+  /* border: 2px solid red; */
+  margin-right: 50px;
+  color: #fff;
+}
+
+

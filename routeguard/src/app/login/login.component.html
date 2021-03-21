@@ -1,0 +1,25 @@
+<!-- We made a normal form first and picked its value into a array now we r going to apply route guard
+firstly we'll make services to avoid typing code again and again as,"ng g service share/users"
+( here 'share' is folder and 'users' is file name). We will use users(services) for local storage, open users file
+  -->
+<mat-card>
+  <form #register="ngForm" (ngSubmit)="onSubmit(register)">
+    <mat-toolbar>
+    Route Guard
+  </mat-toolbar>
+
+  <mat-form-field>
+    <input matInput name="name" #name="ngModel" [(ngModel)]="data.name" ngModel
+    placeholder="Name">
+  </mat-form-field> <br><br>
+  <mat-form-field>
+    <input matInput name="pswd" #pswd="ngModel" [(ngModel)]="data.pswd" ngModel
+    placeholder="Password">
+  </mat-form-field> <br><br>
+
+  <button color="primary" mat-raised-button type="submit">
+    submit
+  </button>
+</form>
+
+</mat-card>

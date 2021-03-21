@@ -1,0 +1,15 @@
+<div *ngFor="let i of data">
+
+  <mat-form-field>
+    <mat-label>Message</mat-label>
+    <input matInput value="i.txt" #message>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Action</mat-label>
+    <input matInput value="i.msg" #action>
+  </mat-form-field>
+ <br><br>
+  <button color="primary" mat-raised-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+
+</div>

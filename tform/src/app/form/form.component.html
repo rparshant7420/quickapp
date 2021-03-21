@@ -1,0 +1,88 @@
+<div class="main">
+
+  <mat-card>
+    <form name="form" #tempform="ngForm" (ngSubmit)="onSubmit(tempform)">
+      <mat-toolbar color="primary">Template Form</mat-toolbar>
+      <mat-form-field class="example-full-width">
+        <mat-label>Enter Your Name</mat-label>
+        <input matInput name="username" ngModel placeholder="Enter Your Name" >
+      </mat-form-field> <br> <br>
+      <mat-form-field class="example-full-width">
+        <mat-label>Enter Your Email</mat-label>
+        <input matInput name="useremail" ngModel placeholder="Enter Your Email" >
+      </mat-form-field> <br> <br>
+      <mat-form-field>
+        <mat-label>Select Your Location</mat-label>
+        <mat-select name="location" ngModel >
+          <!-- mat-option doesn't work without value(attribute) -->
+          <mat-option value="Chandigarh">
+            Chandigarh
+          </mat-option>
+          <mat-option  value="Haryana">
+            Haryana
+            <!-- set default value -->
+          </mat-option>
+          <mat-option value="Himachal">
+            Himachal
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br><br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Enter Your contact</mat-label>
+        <input name="contact" ngModel matInput placeholder="Enter Your Contact" >
+      </mat-form-field> <br> <br>
+      <mat-form-field>
+        <mat-label>Enter Your Profile</mat-label>
+        <mat-select name="profile" ngModel >
+          <!-- mat-option doesn't work without value(attribute) -->
+          <mat-option value="Developer">
+            Developer
+          </mat-option>
+          <mat-option value="Programmer">
+            Programmer
+          </mat-option>
+          <mat-option value="Designer">
+            Designer
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br><br>
+      <mat-form-field>
+        <mat-label>Enter Your Experience(from) </mat-label>
+        <input matInput ngModel name="experience1" [matDatepicker]="myDatePicker">
+        <mat-datepicker-toggle matSuffix [for]="myDatePicker"></mat-datepicker-toggle>
+        <!-- this is for toggle button, which opens calender  -->
+        <mat-datepicker #myDatePicker> <!-- It is actual datepicker,firstly we added a refrance and add datepicker property and bind with refrance,then add for property in toggle and bind with refrance again  -->
+
+        </mat-datepicker>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Enter Your Experience(To) </mat-label>
+        <input matInput ngModel name="experience2" [matDatepicker]="myDatePicker2">
+        <mat-datepicker-toggle matSuffix [for]="myDatePicker2"></mat-datepicker-toggle>
+        <!-- this is for toggle button, which opens calender  -->
+        <mat-datepicker #myDatePicker2> <!-- It is actual datepicker,firstly we added a refrance and add datepicker property and bind with refrance,then add for property in toggle and bind with refrance again  -->
+
+        </mat-datepicker>
+      </mat-form-field>
+
+
+      <button class="sbutn" mat-raised-button  color="primary">Submit</button>
+
+
+    </form>
+
+    <div class="container"  [hidden]="enable" >
+      Name={{data.username}} <br>
+      Email={{data.useremail}} <br>
+      Contact={{data.contact}} <br>
+      Location={{data.location}} <br>
+      Profile={{data.profile}} <br>
+      Experience(From)={{data.experience1}}
+      Experience(To)={{data.experience2}}
+    </div>
+  </mat-card>
+
+</div>

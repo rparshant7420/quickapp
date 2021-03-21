@@ -1,0 +1,19 @@
+.container{
+  width: 50%;
+  margin: 50px auto;
+}
+.changable{
+  height: 400px;
+  background-color: cornsilk;
+}
+/* button.color3,
+button.color2{
+  margin-left: 230px;
+} */
+button{
+  width: 100%;
+}
+button.color3{
+  color: #fff;
+  background-color: #000000;
+}

@@ -1,0 +1,29 @@
+/* navbar  */
+
+.navtile{
+  height: 64px;
+}
+.right
+{
+  margin-left: auto;
+}
+li.white a{
+  color: white !important;
+  font-size: 18px;
+
+}
+li.white a:hover,
+ul.right:hover
+{
+  color: blue !important;
+}
+.logo{
+  font-weight: bold;
+}
+.logo:hover{
+  color: blue !important;
+
+}
+/* content  div  */
+
+

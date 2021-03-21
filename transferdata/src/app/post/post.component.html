@@ -1,0 +1,20 @@
+<!-- make a normal form first and pick its values in a array(data in our case),now make a model using command
+  "ng g class posts/post --type="model" to secure our data , now go  in post.model.ts file-->
+<form #register="ngForm" (ngSubmit)="onSubmit(register)">
+
+  <mat-toolbar>
+    Transfer Data
+  </mat-toolbar>
+    <br><br>
+
+ <mat-form-field >
+  <input matInput placeholder="Text" name="txt" #txt="ngModel" [(ngModel)]="data.txt" ngModel>
+ </mat-form-field>
+ <br><br>
+ <mat-form-field >
+  <input matInput placeholder="Message" name="msg" #msg="ngModel" [(ngModel)]="data.msg" ngModel >
+ </mat-form-field>
+<br><br>
+<button type="submit" mat-raised-button color="primary">Submit</button>
+
+</form>
