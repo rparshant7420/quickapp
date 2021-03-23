@@ -1,3 +1,4 @@
+import { stringify } from '@angular/compiler/src/util';
 import { Component, ElementRef, HostListener, Input, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
@@ -15,6 +16,9 @@ export class ChangeComponent implements OnInit {
   //  changeStyles(){
   //   this.myStyles['background']= 'red'
   //  }
+  color!:string;
+
+
    ngOnInit(): void {
   //   console.log(this.myInput)
 
@@ -23,19 +27,7 @@ export class ChangeComponent implements OnInit {
 
 
    }
-     @HostListener('mouseover') onMouseOver(){
-        this.changeColor('red')
-     }
 
-
-
-    // on mouse leave function
-    @HostListener('mouseleave') onMouseLeave(){
-      this.changeColor('blue')
-    }
-    changeColor(color:string){
-      this.renderer.setStyle(this.el.nativeElement,'color',color);
-    }
 }
 
 

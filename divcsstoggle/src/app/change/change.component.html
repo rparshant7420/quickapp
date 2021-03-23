@@ -1,15 +1,14 @@
-<div class="container">
+<div  class="container">
   <mat-toolbar>
     Chameleon Div
   </mat-toolbar><br>
-  <div class="changable" >
-    <!-- [ngStyle]="myStyles" -->
-    <h1>
-      This is my Chameleon box
-    </h1>
+  <div [appChangecolor]="color" class="changable" >
+    <p >This is my Chameleon box</p>
   </div><hr>
-  <button mat-raised-button class="color1" color="primary" type="submit" >Blue</button><br><br>
-  (click)="changeStyles()"
-  <button mat-raised-button class="color2" color="warn" type="submit">Red</button><br><br>
-  <button mat-raised-button class="color3" type="submit">Black</button>
+
+  <mat-radio-group aria-label="Select an option">
+    <mat-radio-button value="1" (click)="color='green'">green</mat-radio-button>
+    <mat-radio-button value="2" (click)="color='yellow'">yellow</mat-radio-button>
+    <mat-radio-button value="3"(click)="color='red'" >red</mat-radio-button>
+  </mat-radio-group>
 </div>

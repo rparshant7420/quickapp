@@ -9,13 +9,16 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
 
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { ChangecolorDirective } from './changecolor.directive';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChangeComponent
+    ChangeComponent,
+    ChangecolorDirective
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     BrowserAnimationsModule,
 
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent],
